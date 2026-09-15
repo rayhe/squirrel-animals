@@ -1,0 +1,235 @@
+/* The Squirrel Squad: bright, playful, kid friendly */
+
+:root {
+  --sky: #e8f6ff;
+  --leaf: #3e9e4f;
+  --leaf-dark: #2c7a3a;
+  --sun: #ffcf3f;
+  --acorn: #8a5a2b;
+  --bark: #4a3521;
+  --cream: #fffaf0;
+  --berry: #e2574c;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: ui-rounded, "SF Pro Rounded", "Hiragino Maru Gothic ProN", system-ui, sans-serif;
+  background: var(--cream);
+  color: var(--bark);
+  line-height: 1.55;
+}
+
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+h1, h2, h3 { line-height: 1.2; }
+
+h2 { font-size: 2rem; text-align: center; margin: 0 0 8px; }
+
+.section-intro { text-align: center; max-width: 640px; margin: 0 auto 28px; font-size: 1.05rem; }
+
+.note { text-align: center; font-size: 0.9rem; opacity: 0.75; }
+
+/* Header */
+
+.site-header {
+  background: var(--leaf);
+  color: #fff;
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+
+.logo { font-size: 1.35rem; font-weight: 800; }
+
+.site-header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 18px;
+  font-weight: 600;
+}
+
+.site-header nav a:hover { text-decoration: underline; }
+
+/* Hero */
+
+.hero {
+  background: linear-gradient(180deg, var(--sky) 0%, #f4fbff 100%);
+  padding: 48px 0 40px;
+}
+
+.hero-inner { display: flex; gap: 32px; align-items: center; flex-wrap: wrap; }
+
+.hero-text { flex: 1 1 320px; }
+
+.hero h1 { font-size: 3rem; margin: 0 0 12px; color: var(--leaf-dark); }
+
+.tagline { font-size: 1.15rem; margin-bottom: 20px; }
+
+.hero-img {
+  flex: 1 1 320px;
+  max-width: 480px;
+  width: 100%;
+  border-radius: 24px;
+  border: 6px solid #fff;
+  box-shadow: 0 12px 32px rgba(62, 158, 79, 0.25);
+}
+
+.btn {
+  display: inline-block;
+  background: var(--sun);
+  color: var(--bark);
+  border: none;
+  border-radius: 999px;
+  padding: 14px 30px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 0 #d9a91f;
+}
+
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(2px); box-shadow: none; }
+
+/* Cards */
+
+#squad { padding: 56px 0 24px; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(74, 53, 33, 0.12);
+  border: 3px solid #f3e8d3;
+  transition: transform 0.15s ease;
+}
+
+.card:hover { transform: translateY(-4px); }
+
+.card img { width: 100%; height: 220px; object-fit: cover; display: block; }
+
+.card-body { padding: 18px 20px 22px; }
+
+.card h3 { margin: 0; font-size: 1.35rem; color: var(--leaf-dark); }
+
+.nick {
+  margin: 2px 0 12px;
+  font-style: italic;
+  color: var(--acorn);
+  font-weight: 600;
+}
+
+.card dl { margin: 0 0 12px; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px; font-size: 0.95rem; }
+
+.card dt { font-weight: 800; color: var(--leaf-dark); }
+.card dd { margin: 0; }
+
+.power, .fun { font-size: 0.95rem; margin: 8px 0; }
+
+.power { background: #f0f9f1; border-radius: 12px; padding: 10px 12px; }
+
+/* Bands */
+
+.band { background: var(--sky); padding: 56px 0; margin-top: 40px; }
+
+#quiz.band { background: #f3ecff; margin-top: 0; }
+
+/* Size list */
+
+.sizelist { max-width: 680px; margin: 0 auto; }
+
+.sizerow { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+
+.sname { width: 200px; text-align: right; font-weight: 700; font-size: 0.95rem; }
+
+.bar {
+  height: 22px;
+  background: linear-gradient(90deg, var(--leaf), #7cc98a);
+  border-radius: 11px;
+}
+
+.slen { font-size: 0.9rem; opacity: 0.8; }
+
+/* Fact box */
+
+.factbox {
+  max-width: 640px;
+  margin: 0 auto;
+  background: #fff;
+  border: 3px solid var(--sun);
+  border-radius: 20px;
+  padding: 28px;
+  text-align: center;
+}
+
+#fact-text { font-size: 1.25rem; font-weight: 600; min-height: 3.5em; }
+
+/* Quiz */
+
+.quizbox {
+  max-width: 640px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 20px;
+  padding: 32px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(74, 53, 33, 0.12);
+}
+
+.quiz-progress { font-size: 0.9rem; opacity: 0.7; }
+
+.quiz-q { font-size: 1.3rem; font-weight: 800; }
+
+.quiz-answers { display: grid; gap: 12px; margin-top: 16px; }
+
+.quiz-answers button {
+  background: #f3ecff;
+  border: 2px solid #d5c2f5;
+  border-radius: 14px;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--bark);
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.quiz-answers button:hover { background: #e6d9fb; }
+
+#quiz-result img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 16px;
+}
+
+#quiz-result h3 { font-size: 1.6rem; margin: 14px 0 2px; color: var(--leaf-dark); }
+
+/* Footer */
+
+footer {
+  background: var(--leaf-dark);
+  color: #eef7ee;
+  padding: 36px 0;
+  font-size: 0.9rem;
+}
+
+footer p { max-width: 760px; }
+
+/* Mobile */
+
+@media (max-width: 640px) {
+  .hero h1 { font-size: 2.2rem; }
+  .sname { width: 130px; font-size: 0.85rem; }
+  .site-header nav a { margin-left: 10px; }
+}
